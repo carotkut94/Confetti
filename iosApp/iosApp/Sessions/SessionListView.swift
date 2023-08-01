@@ -35,7 +35,7 @@ private struct SessionsContentView: View {
                     Text("\(formattedConfDates[i])").tag(i)
                 }
             }
-            .pickerStyle(.segmented)
+            .pickerStyle(.segmented).padding(.leading, 16).padding(.trailing, 16).padding(.bottom, 8)
 
             List {
                 ForEach(sessionUiState.sessionsByStartTimeList[selectedDateIndex].keys.sorted(), id: \.self) {key in
